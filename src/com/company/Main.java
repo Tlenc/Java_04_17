@@ -15,6 +15,9 @@ public class Main {
         int dyd = poli2.length()/2;
         int sutap = 0;
         boolean runing = true;
+        tikrinimas(poli2,polir2,dyd,sutap,runing,poli,polir);
+}
+    public static void tikrinimas(String poli2,String polir2,int dyd,int sutap,boolean runing,String poli,String polir){
         for (int i = 0; i < dyd; i++) {
             for (int b = dyd;b > 0;b--){
                 if(poli2.charAt(i) == polir2.charAt(b)){
@@ -23,14 +26,15 @@ public class Main {
             }
         } runing = false;
         if( runing == false){
-        if(sutap == dyd){
-            System.out.println("Įvesta polindromas");
-            System.out.println(poli);
-            System.out.println(polir);
-        }else {
-            System.out.println("Įvesta ne polindromas");
-            System.out.println(poli);
-            System.out.println(polir);
+            if(sutap == dyd){
+                System.out.println("Įvesta polindromas");
+                System.out.println(poli);
+                System.out.println(polir);
+            }else {
+                System.out.println("Įvesta ne polindromas");
+                System.out.println(poli);
+                System.out.println(polir);
+            }
         }
     }
-}}
+}
